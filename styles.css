@@ -1,0 +1,298 @@
+/* General Styles for the Resume */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    margin: 0;
+    padding: 0;
+}
+
+.form-container {
+    max-width: 600px;
+    margin: 20px auto;
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.resume-container {
+    display: flex;
+    max-width: 1000px;
+    margin: 30px auto;
+    background-color: white;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px; /* Adding border-radius for the entire container */
+}
+
+.left-column {
+    width: 30%;
+    background-color: #2E4A8A;
+    color: white;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border-radius: 8px 0 0 8px;
+}
+
+.right-column {
+    width: 70%;
+    padding: 20px;
+}
+
+/* Heading Styles */
+h1, h2, h3 {
+    color: #2E4A8A;
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+h3, h2 {
+    border-bottom: 2px solid #2E4A8A;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    font-size: 28px;
+}
+
+h2 {
+    font-size: 18px;
+}
+
+p {
+    color: #333;
+    margin: 5px 0;
+}
+
+/* Languages Section */
+.languages {
+    margin-top: 10px;
+}
+
+/* Language Item Text Styling */
+.language-item p {
+    color: #FFFFFF;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Proficiency Bar for Languages */
+.language-item .proficiency-bar {
+    width: 100%;
+    height: 8px;
+    background-color: #ccc;
+    border-radius: 4px;
+}
+
+.language-item .proficiency-bar .proficiency {
+    height: 100%;
+    background-color: #4CAF50; /* Green proficiency bar */
+}
+
+/* Skills Section */
+/* Skills Section */
+.skills .skill-item {
+    margin-top: 10px;
+}
+
+.skill-bar {
+    width: 100%;
+    height: 8px; /* Adjusted height to match language proficiency bar */
+    background-color: #ccc;
+    border-radius: 4px; /* Matching the rounded corners of the proficiency bar */
+}
+
+.skill {
+    height: 100%;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 8px; /* Adjust line-height to match bar height */
+    color: white;
+    font-weight: bold;
+}
+
+/* Add Proficiency Bars for Skills */
+.skill-item, .language-item {
+    margin-bottom: 20px;
+  }
+  
+  .skill-item p, .language-item p {
+    color: white; /* Set the skill/language name text color to white */
+    font-size: 16px; /* Adjust font size as needed */
+    font-weight: bold; /* Optional: make the skill name bold */
+  }
+  
+  .progress-bar-container {
+    width: 100%;
+    background-color: #e0e0e0;
+    border-radius: 10px;
+    height: 15px; /* Adjust the height for the line bar */
+  }
+  
+  .progress-bar {
+    height: 100%;
+    background-color: #4caf50; /* Change the color to your desired one */
+    border-radius: 10px;
+  }
+  
+  
+
+/* Buttons */
+button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+textarea {
+    height: 100px;
+}
+
+button[type="button"] {
+    background-color: #2E4A8A;
+}
+
+/* Resume Layout */
+.resume-container .left-column,
+.resume-container .right-column {
+    padding: 20px;
+}
+
+.profile-image {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+section {
+    margin-bottom: 20px;
+}
+
+/* Skills & Languages */
+section .skills, section .languages, section .contact {
+    margin-top: 10px;
+    color: white; /* Change text color to white */
+}
+
+/* Section Heading Colors */
+.left-column .skills h3, .left-column .languages h3, .left-column .contact h3 {
+    color: white; /* Make section headings white */
+}
+
+/* Line Styling for Sections */
+.left-column .skills h3::after,
+.left-column .languages h3::after,
+.left-column .contact h3::after {
+    content: '';
+    display: block;
+    height: 2px;
+    background-color: white; /* White line below section titles */
+    margin-top: 5px;
+}
+
+
+/* Style for Social Media Links */
+.social-links {
+    display: flex;
+    gap: 15px;  /* Adds a gap of 15px between each link */
+}
+
+.social-link {
+    color: white !important; /* Set the text color to white and override any other color */
+    text-decoration: none; /* Remove underline */
+    font-weight: bold; /* Optional: makes the text bold */
+    font-size: 16px; /* Optional: adjust font size */
+}
+
+.social-link:hover {
+    color: #4caf50; /* Change color when hovering */
+    text-decoration: underline; /* Underline on hover */
+}
+
+  
+
+/* Contact Section Specific Styles */
+.left-column .contact p {
+    color: white; /* Make contact info text white */
+}
+
+.left-column .contact {
+    margin-top: 10px;
+}
+
+/* Contact Subheading Styles */
+#contactInfo h4 {
+    font-weight: bold; /* Make subheadings bold */
+    font-size: 1.1em; /* Slightly larger font for subheadings */
+    margin-top: 10px; /* Space between sections */
+    color: #fff; /* White color for subheadings */
+}
+
+#contactInfo p {
+    margin: 5px 0; /* Space between text and the subheading */
+    font-size: 1em; /* Regular text size */
+}
+
+#contactInfo a {
+    text-decoration: none;
+    color: #0073e6; /* Blue color for links */
+}
+
+#contactInfo a:hover {
+    text-decoration: underline; /* Underline links on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+    }
+
+    .left-column, .right-column {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .profile-image {
+        width: 80px; /* Smaller profile image on mobile */
+        height: 80px;
+        margin-bottom: 15px;
+    }
+}
+
+
+/* Add CSS for the new button styles */
+button[type="button"] {
+    background-color: #2E4A8A;
+    color: white;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    border-radius: 4px;
+    font-weight: bold;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #1A2F60;
+  }
+  

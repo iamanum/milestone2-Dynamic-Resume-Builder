@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Resume Builder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="form-container">
+    <h2>Enter Your Information</h2>
+    <form id="resumeForm">
+      <label for="name">Name:</label>
+      <input type="text" id="name" placeholder="Your Name" required>
+
+      <label for="title">Job Title:</label>
+      <input type="text" id="title" placeholder="Your Job Title" required>
+
+      <label for="summary">Summary:</label>
+      <textarea id="summary" placeholder="Brief summary about you" required></textarea>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" placeholder="Your Email" required>
+
+      <label for="phone">Phone:</label>
+      <input type="tel" id="phone" placeholder="Your Phone Number" required>
+
+      <label for="location">Location:</label>
+      <input type="text" id="location" placeholder="Your Location" required>
+
+      <!-- Social Media Links -->
+      <label for="linkedin">LinkedIn Profile (Optional):</label>
+      <input type="url" id="linkedin" placeholder="Your LinkedIn URL">
+
+      <label for="github">GitHub (Optional):</label>
+      <input type="url" id="github" placeholder="Your GitHub URL">
+
+      <label for="twitter">Twitter (Optional):</label>
+      <input type="url" id="twitter" placeholder="Your Twitter URL">
+
+      <label for="facebook">Facebook (Optional):</label>
+      <input type="url" id="facebook" placeholder="Your Facebook URL">
+
+      <label for="profileImage">Profile Image:</label>
+      <input type="file" id="profileImage" accept="image/*">
+
+      <!-- Experience -->
+      <h3>Experience</h3>
+      <div id="experience-container">
+        <input type="text" id="jobTitleInput" placeholder="Job Title">
+        <input type="text" id="companyInput" placeholder="Company">
+        <input type="text" id="durationInput" placeholder="Duration (e.g., 2020 - 2023)">
+        <textarea id="jobDescriptionInput" placeholder="Job Description (optional)"></textarea>
+        <button type="button" onclick="addExperience()">Add Experience</button>
+      </div>
+
+      <!-- Education -->
+      <h3>Education</h3>
+      <div id="education-container">
+        <input type="text" id="degreeInput" placeholder="Degree (e.g., B.Sc. in Computer Science)">
+        <input type="text" id="schoolInput" placeholder="School/University">
+        <input type="text" id="eduDurationInput" placeholder="Duration (e.g., 2017 - 2021)">
+        <textarea id="educationDescriptionInput" placeholder="Description (optional)"></textarea>
+        <button type="button" onclick="addEducation()">Add Education</button>
+      </div>
+
+      <!-- Achievements -->
+      <h3>Achievements & Certifications</h3>
+      <div id="achievements-container">
+        <input type="text" id="achievementInput" placeholder="Achievement/Certification Title">
+        <input type="text" id="achievementDateInput" placeholder="Date">
+        <button type="button" onclick="addAchievement()">Add Achievement</button>
+      </div>
+
+      <!-- Skills -->
+      <h3>Skills</h3>
+      <div id="skills-container">
+        <input type="text" id="skillsInput" placeholder="Skill">
+        <input type="number" id="skillsPercentage" placeholder="Proficiency (0-100)" min="0" max="100">
+        <button type="button" onclick="addSkill()">Add Skill</button>
+      </div>
+
+      <!-- Languages -->
+      <h3>Languages</h3>
+      <div id="languages-container">
+        <input type="text" id="languagesInput" placeholder="Language">
+        <input type="number" id="languagesPercentage" placeholder="Proficiency (0-100)" min="0" max="100">
+        <button type="button" onclick="addLanguage()">Add Language</button>
+      </div>
+
+      <button type="button" onclick="generateResume()">Generate Resume</button>
+    </form>
+  </div>
+
+  <div class="resume-container">
+    <div class="left-column">
+      <img id="profileImageDisplay" src="#" alt="Profile Image" class="profile-image" style="display: none;">
+      <section class="contact">
+        <h3>Contact</h3>
+        <div id="contactInfo">
+          <h4>Email</h4>
+          <p id="emailDisplay"></p>
+
+          <h4>Phone</h4>
+          <p id="phoneDisplay"></p>
+
+          <h4>Location</h4>
+          <p id="locationDisplay"></p>
+
+          <h4>Social Media Links</h4>
+          <div id="socialLinks"></div>
+        </div>
+      </section>
+      <section class="skills">
+        <h3>Skills</h3>
+        <div id="skillsList"></div>
+      </section>
+      <section class="languages">
+        <h3>Languages</h3>
+        <div id="languagesList"></div>
+      </section>
+    </div>
+
+    <div class="right-column">
+      <h1 id="nameDisplay"></h1>
+      <h3 id="jobTitleDisplay"></h3>
+      <section class="summary">
+        <h2>Summary</h2>
+        <p id="summaryDisplay"></p>
+      </section>
+      <section class="experience">
+        <h2>Experience</h2>
+        <div id="experienceList"></div>
+      </section>
+      <section class="education">
+        <h2>Education</h2>
+        <div id="educationList"></div>
+      </section>
+      <section class="achievements">
+        <h2>Achievements & Certifications</h2>
+        <div id="achievementsList"></div>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
